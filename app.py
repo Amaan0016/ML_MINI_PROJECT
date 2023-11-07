@@ -4,6 +4,15 @@ import sklearn
 from nltk.corpus import stopwords
 import nltk 
 import string 
+from nltk.stem.porter import PorterStemmer
+ps = PorterStemmer()
+from PIL import Image
+nltk.download('punkt')
+nltk.download('stopwords')
+
+image = Image.open('me2.png')
+
+st.image(image, caption='EMAIL')
 
 def transform_text(text):
     text = text.lower()
